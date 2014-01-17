@@ -22,12 +22,7 @@ Real-Time systems have a response time constraint. Usually this constraint is no
 
 \begin{exmp}
 Take for example a carriage that must be stopped before it hits a bumper. The physical measurement unit here is \textbf{distance}. This constraint can easily be converted to a timing constraint given it's initial speed, braking characteristics, etc. 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{carriage.jpg}
-    \caption{Example: Carriage stopping before bumper.}
-    \label{carriage}
-\end{figure}
+\importtikz{carriage}{Example: Carriage stopping before bumper.}
 \end{exmp}
 
 However, since a computer has no notion of distance, specifications in terms of physical units have to be converted to a timing constraint.
@@ -113,12 +108,8 @@ As mentioned in the first section, timing constraints are different for differen
 \end{itemize}
 Unlike the other cases, in a real-time system, the value of work does not decrease with the time needed to do the work. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{reactiontime.jpg}
-    \caption{Example: Time in a real-time system.}
-    \label{rttime}
-\end{figure}
+\importtikz{reactiontime}{Example: Time in a real-time system.}
+
 The reaction to the stimulus (the event that triggers the response) must be performed within a certain time interval following it. (this time interval may start with the stimulus or later) During this time interval, the value of the response is constant. When the time interval is elapsed, the value of the response can:
 \begin{itemize}
 	\item decrease \textit{(like when cooking a soft boiled egg)}

@@ -36,12 +36,12 @@ Mostly using a specifically designed OS is generally faster since versatility co
 The creation of a real-time system is done using 6 steps.
 These steps are listed below and each step is discussed in further detail in this section. 
 \begin{enumerate}
-	\item Specify the problem. (see \ref{sss:specify_problem})
-	\item Design the software architecture. (see \ref{sss:design})
-	\item Identify the services the \define{system layer} must provide. (see \ref{sss:services})
-	\item Validation or design of the system layer. (see \ref{sss:valid})
-	\item Specify the data processing activities. (see \ref{sss:activities})
-	\item Write the program(s). (see \ref{sss:write})
+	\item Specify the problem. (see~\ref{sss:specify_problem})
+	\item Design the software architecture. (see~\ref{sss:design})
+	\item Identify the services the \define{system layer} must provide. (see~\ref{sss:services})
+	\item Validation or design of the system layer. (see~\ref{sss:valid})
+	\item Specify the data processing activities. (see~\ref{sss:activities})
+	\item Write the program(s). (see~\ref{sss:write})
 \end{enumerate}
 
 \subsection{Specify the problem}
@@ -177,14 +177,9 @@ Controlling these tasks can be done with interrupt masks and (static) priorities
 Periodic tasks should be implemented with a timer/clock (naive implementation is possible but dirty).
 To do so use clock interrupts and at each tick launch the needed tasks.
 It's important that the sum of the durations of the tasks launched at any given clock tick must be less than the clock period. 
-An example can be seen in figure \ref{f:perd_ex}.
+An example can be seen in \figref{clock_ticks}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics{clock_ticks.png}
-	\caption{Example of periodic tasks: At even clock ticks T1 and T2 are launched at uneven clock ticks T3 and T2.}
-	\label{f:perd_ex}
-\end{figure}
+\importtikz{clock_ticks}{Example of periodic tasks: At even clock ticks T1 and T2 are launched at uneven clock ticks T3 and T2.}
 
 Using this kind of scheduling doesn't put a 100\% load on the cpu.
 The lengths of the task can also vary a little if the sum of durations remains under the clock period.
@@ -214,14 +209,9 @@ On a mono-processor \define{mutual exclusion} can sometimes be achieved with tem
 In any other case this can be implemented by using atomic READ/MODIFY/WRITE assembly language instructions.
 On a multiprocessor the memory access between the READ and WRITE will be blocked for all but one processor.
 Examples of READ/MODIFY/WRITE instructions are: TSET (test \& set) and ASL (arithmetic shift left). 
-For the latter we refer to image \ref{f:asl}. 
+For the latter we refer to \figref{asl}. 
 
-\begin{figure}
-	\centering
-	\includegraphics{ASL.png}
-	\caption{Figure showing how Arithmetic Left Shift works.}
-	\label{f:asl}
-\end{figure}
+\importtikz{asl}{Working of a Arithmetic Left Shift (ASL).}
 
 \subsubsection{Programming}
 Which \index{Programming Language!!Choice of} programming language should be chosen to implement the system layer? 

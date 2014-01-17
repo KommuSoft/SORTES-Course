@@ -182,14 +182,10 @@ Running the function more frequently than needed therefore is wasted activity.
 It is often sufficient to wake the task up a certain amount of times per second and let it go back to sleep afterwards.
 
 \subsubsection{Task States in MicroC/OS-II}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{microCOS_states.png}
-    \caption{MicroC/OS-II States}
-    \label{mcosii}
-\end{figure}
 
-A task is in either of the \define{task states} shown in figure \ref{mcosii}.
+\importtikz{mcosii}{MicroC/OS-II States}
+
+A task is in either of the \define{task states} shown in \figref{mcosii}.
 \begin{itemize}
 	\item When the task is created, the task is \textbf{ready} to run.
 	\item When the task is selected by the scheduler it's in the \textbf{running} state.
@@ -335,11 +331,6 @@ It's necessary that $| \Delta | \leq g \leq | 2 \Delta |$:
 \end{itemize}
 In these conditions, one can identify the order of two events occurring on different sites, provided that they are at least two clock ticks apart.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{timings.jpg}
-    \caption{Clock Resolution}
-    \label{clockres}
-\end{figure}
+\importtikz{timings}{Clock resolution}
 
 \end{document}
