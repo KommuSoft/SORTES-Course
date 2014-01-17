@@ -32,3 +32,10 @@
 *.tdo
 
 *[Tt]humbs.db
+
+# Temporary
+*~
+*.*~*
+*.bak
+*.backup
+*.swp
