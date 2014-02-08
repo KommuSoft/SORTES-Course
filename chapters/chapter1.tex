@@ -49,7 +49,7 @@ The dedicated controller usually handles tasks with critical real-time constrain
  
 \subsection{Central System}
 The central system often deals with less critical external constraints. However, the farther remote from the controlled system, the more \textit{unpredictable events} increase the difficulty to satisfy the constraints. 
-\\\\
+\paragraph{}
 The system centralizes information in order to provide a global view on the whole system. The operator interface is managed by this system and offers an overview of the situation, consisting of a global view and selected useful details. In a more advanced application the system might suggest actions to be undertaken by the user.
 
 \subsection{Connections}
@@ -78,7 +78,7 @@ In some cases the internal system bus of the controlling system is used instead 
 
 \subsubsection{PLC: Programmable Logic Controller}
 PLCs are small computers, generally micro-controllers, executing a programmable logic controller language interpreter. The do not offer interrupts and programs are structured as a single infinite loop. At the beginning of the loop data is read, it is then processed and finally a control signal is outputted.
-\\\\
+\paragraph{}
 The content of the loop might exist of an interpreter simulating a logic circuit. The language interpreted in then called a \definebf{ladder diagram}. Another possibility is the interpreter simulating a simple state machine. The programming language is then called \definebf{GRAFCET}. At each loop iteration a state transition is triggered based on the output of the previous state.
 
 \paragraph{Ladder Diagram} 

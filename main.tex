@@ -2,7 +2,7 @@
 
 % Essential
 \usepackage[USenglish,english,american]{babel}
-\usepackage{titling}
+%\usepackage{titling}
 
 % Optional
 \usepackage[hidelinks]{hyperref}
@@ -15,14 +15,15 @@
 \usepackage{float}
 \usepackage[official]{eurosym}
 \usepackage{xcolor}
-\usepackage{subfiles}
-\usepackage{framed}
+%\usepackage{framed}
 \usepackage[strict]{changepage}
 \usepackage{tabularx}
-\usepackage{mdframed}
+%\usepackage{mdframed}
 \usepackage{makeidx}
 \usepackage[totoc]{idxlayout}
 \usepackage{mfirstuc}
+
+\newcommand{\conse}{\ensuremath{e}}
 
 %\usepackage[printwatermark]{xwatermark}
 %\newwatermark[allpages,color=gray!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
@@ -85,12 +86,12 @@
 \makeatother
 
 \newcommand{\importtikz}[2]{
-% \begin{figure}[hbt]
-%   \centering
+\begin{figure}
+  \centering
   \input{tikz/#1.tex}
-%   \caption{#2}
-%   \label{fig:#1}
-% \end{figure}
+  \caption{#2}
+  \label{fig:#1}
+\end{figure}
 }
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}%Figure is always written with a capital and the reference is always placed on the same line!
 
@@ -111,12 +112,12 @@
 
 % Boxed Theorems
 \newenvironment{exmp}
-  {\begin{mdframed}\begin{asmexmp}}
-  {\end{asmexmp}\end{mdframed}}
+  {\begin{asmexmp}}
+  {\end{asmexmp}}
 
 \newenvironment{defn}
-  {\begin{mdframed}\begin{asmdefn}}
-  {\end{asmdefn}\end{mdframed}}
+  {\begin{asmdefn}}
+  {\end{asmdefn}}
 
 
 
