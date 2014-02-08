@@ -1,6 +1,3 @@
-% \documentclass[../main.tex]{subfiles} 
-
-\begin{document}
 \chapter{Identification of Suitable Hardware}
 To select suitable \define{hardware} for a real-time embedded system we should first define what suitable means in this case. Suitable hardware is hardware that can satisfy the given (time) constraints and is not too overdimensioned.
 
@@ -30,7 +27,7 @@ Don't try to find the minimal structure (this problem is NP-complete) but a real
 \emph{Given is that:} 2 processes, P1 and P2, receive each an external stimulus (resp. x et y). After some preprocessing, they send the result to a process P3 that, after some processing warns process P4, that reacts on the external system. %In English, one does not write hyphens, except on rare occasions
 
 \emph{Solution:} If we neglect message transmission times, one can represent what the 4 processes would do, on a maximal resource structure, if all stimuli occurred at boot time.
-That gives us our (clearly correct) maximal resource structure as seen in \figref{sh_ex1}.
+That gives us our (clearly correct) maximal resource structure as seen in \figref{shex1}.
 Not neglecting transmission times is an immediate adaptation of the representation. One can regroup P1 and P4 on a same processor, without lengthening the reaction times. It would also have been possible to regroup P2 and P4. Then the response time would have been increased, but would still satisfy the constraint.
 As, in normal working conditions (thus without taking initialization into account), P2 is working the most, it will be P2 that will determine the lowest possible repetition period of the stimuli (duration of pre-processing + post-processing of P2). However, at that rate, no grouping of processes is possible anymore.
 
@@ -39,7 +36,3 @@ As, in normal working conditions (thus without taking initialization into accoun
 \importtikz{shex2}{Figure representing the maximal resource structure of the given problem.}%TODO: same title??
 
 \end{exmp}
-
-
-
-\end{document}

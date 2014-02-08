@@ -1,6 +1,3 @@
-% \documentclass[../main.tex]{subfiles}
-
-\begin{document}
 \chapter{Implementing ASG}
 In this chapter we have a look at how AS can be implemented on different architectures.
 
@@ -84,4 +81,3 @@ But it can easily be achieved in the application by creating a ``timeout'' task.
 By default this task is suspended if another tasks that needs a timeout, the temporized task, it starts the timeout task (with \lstinline{OSTaskResume()}).
 The timeout task itself then creates a delay for the specified time. After that time it suspends itself and sets a flag to wake up the task it was waiting for.
 If the temporized task exists it's temporized state before the waiting is over it must notify the timeout task.
-\end{document}

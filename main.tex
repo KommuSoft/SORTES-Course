@@ -84,7 +84,14 @@
    }
 \makeatother
 
-\newcommand{\importtikz}[2]{\begin{figure}[hbt]\centering\input{tikz/#1.tex}\caption{#2}\label{fig:#1}\end{figure}}
+\newcommand{\importtikz}[2]{
+% \begin{figure}[hbt]
+%   \centering
+  \input{tikz/#1.tex}
+%   \caption{#2}
+%   \label{fig:#1}
+% \end{figure}
+}
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}%Figure is always written with a capital and the reference is always placed on the same line!
 
 
@@ -144,18 +151,18 @@
 \tableofcontents
 
 \newpage
-\subfile{preface}
+\input{preface}
 
 \mainmatter
 \part{Real-Time Systems}
-\subfile{chapters/chapter1}
-\subfile{chapters/chapter2}
-\subfile{chapters/chapter3}
-\subfile{chapters/chapter4}
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
 \part{Asynchronous State Graphs}
-\subfile{chapters/chapter5}
-\subfile{chapters/chapter6}
-\subfile{chapters/chapter7}
+\input{chapters/chapter5}
+\input{chapters/chapter6}
+\input{chapters/chapter7}
 
 
 % Appendix
