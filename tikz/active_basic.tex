@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\node [place,tokens=3] (M) at (0,0) {};
+\node [draw=black,rectangle] (W) at (-5,0) {Watchdog};
+\node [draw=black,rectangle] (P1) at (0,1.5) {Main processor};
+\node [draw=black,rectangle] (P2) at (0,-1.5) {Second processor};
+\node [draw=black,draw,cloud,cloud puffs = 3] (C) at (4,0) {Control system};
+\draw[dashed,->] (W) -- (M);
+\draw[->] (M) -- (C);
+\draw[->] (P1.south) node[anchor=north west]{out} -- (M);
+\draw[->] (P2.north) node[anchor=south west]{out} -- (M);
+\draw[->] (C) -- (P1.east) node[anchor=west]{in};
+\draw[->] (C) -- (P2.east) node[anchor=west]{in};
+\draw[->] (P1) to node[sloped,above]{health report} (W);
+\draw[->] (P2) to node[sloped,below]{health report} (W);
+\end{tikzpicture}
